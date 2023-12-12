@@ -1,0 +1,41 @@
+5. Write the code of ArrayIndexOutOfBoundsException & StringIndexOutOfBoundsException?
+package com.JavaPracticeTask11.org;
+
+public class ArrayIndexOutOfBoundsException {
+	public static void main(String[] args) {
+
+		try {
+			int array[] = { 5, 3, 4, 8 };
+			// This will throw ArrayIndexOutOfBoundsException
+			int arrayValue = array[4];
+			// This line will not be executed
+			System.out.println(arrayValue);
+		} catch (Exception e) {
+			// This line will print the error message	
+			System.err.println("Error Message: " + e.getMessage());
+		}
+	}
+}
+Console Outpur:
+Error Message: Index 4 out of bounds for length 4
+
+----------------------------------------------------------------------
+
+package com.JavaPracticeTask11.org;
+public class StringIndexOutOfBoundsException {
+	public static void main(String[] args) {
+
+		try {
+			String str = "Surendhar";
+			// This will throw StringIndexOutOfBoundsException
+			char valueofcharAt = str.charAt(11);
+			// This line will not be executed
+			System.out.println(valueofcharAt);
+		} catch (Exception e) {
+			// This line will print the error message
+			System.err.println("Error Message: " + e.getMessage());
+		}
+	}
+}
+Console Outpur:
+Error Message: Index 11 out of bounds for length 9
