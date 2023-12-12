@@ -1,0 +1,16 @@
+What is the difference between Exception and error?
+
+The difference between Exception and error is that:
+An Exception is an event that occurs during the program execution and disrupts the normal flow of the program’s execution. 
+An Error is a severe situation generated when the user performs an unexpected operation.
+
+Errors mostly happen at compile-time like syntax error; however it can happen at runtime as well. Whereas an Exception occurs at runtime 
+(checked exceptions can be detected at compile time). Both Error and Exception have the same parent class as Throwable.
+
+Handling:
+Exception: Exceptions can be caught using try-catch blocks, allowing the program to handle the exceptional condition.
+Error: Errors are not typically caught or handled by the program because they are severe problems.
+
+Examples:
+Exception: Examples of exceptions include NullPointerException, ArrayIndexOutOfBoundsException, RuntimeException, ArithmeticException and FileNotFoundException.
+Error: cinclude OutOfMemoryError, StackOverflowError, and VirtualMachineError.
