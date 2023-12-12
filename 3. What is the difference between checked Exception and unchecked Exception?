@@ -1,0 +1,7 @@
+3. What is the difference between checked Exception and unchecked Exception?
+
+Checked exceptions occur during compile time when the source code is being converted into an executable code.
+Checked exceptions can be manually created. The Java Virtual Machine requires the checked exception to be caught or handled.
+
+Unchecked exceptions occur during runtime when the program is in execution. The compiler does not check these types of exceptions.
+Unchecked exceptions can also be manually created. The Java Virtual Machine does not require the unchecked exception to be caught or handled.
