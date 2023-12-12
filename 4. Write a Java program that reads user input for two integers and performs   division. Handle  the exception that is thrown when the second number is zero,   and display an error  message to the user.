@@ -1,0 +1,37 @@
+4. Write a Java program that reads user input for two integers and performs division. Handlethe exception that is thrown when the second number is zero, and display an errormessage to the user.
+
+package com.JavaPracticeTask11.org;
+
+import java.util.Scanner;
+
+public class DivisionProgram {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		try {
+			System.out.println("Enter the first number");
+			int firstnumber = scanner.nextInt();
+			System.out.println("Enter the second number");
+			int secondnumber = scanner.nextInt();
+
+			if (secondnumber == 0) {
+				throw new ArithmeticException("Cannot convert into zero");
+			}
+			int result = firstnumber / secondnumber;
+			System.out.println("Converted division is: " + result);
+		} catch (Exception e) {
+			System.err.println("Error Message: " + e.getMessage());
+		}
+		scanner.close();
+	}
+}
+
+Console output:
+
+Enter the first number
+200
+Enter the second number
+0
+Error Message: Cannot convert into zero
