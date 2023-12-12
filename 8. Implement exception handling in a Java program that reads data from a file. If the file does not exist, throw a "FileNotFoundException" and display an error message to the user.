@@ -1,0 +1,46 @@
+8. Implement exception handling in a Java program that reads data from a file. If the file does not exist, throw a "FileNotFoundException" and display an error message to the user.
+
+package com.JavaPracticeTask11.org;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReadExample {
+
+	public static void main(String[] args) {
+		try {
+			String fileName = "nonexist_file.txt";
+			readDataFromFile(fileName);
+
+		} catch (FileNotFoundException e) {
+			System.err.println("Please provide a valid file name.");
+
+		} catch (IOException e) {
+			System.err.println("An IO exception occurred while reading the file.");
+
+		} finally {
+			System.out.println("File reading process completed.");
+		}
+	}
+	
+	private static void readDataFromFile(String fileName) throws FileNotFoundException, IOException {
+		try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+			String line;
+			while ((line = reader.readLine()) != null) {
+				System.out.println(line);
+			}
+		} catch (FileNotFoundException e) {
+			throw e;
+			
+		} catch (IOException e) {
+			throw e;
+		}
+	}
+
+}
+console output:
+
+Please provide a valid file name.
+File reading process completed.
