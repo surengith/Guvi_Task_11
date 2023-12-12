@@ -1,0 +1,37 @@
+
+7. Create a custom exception in Java called "Invalid AgeException" that is thrown when the user enters an age less than 18. 
+Implement exception handling in a Java program to catchthe "InvalidAgeException” and display an error message.
+
+package com.JavaPracticeTask11.org;
+import java.util.Scanner;
+public class AgeValidationProgram {
+
+	public static void main(String[] args) {
+		try {
+			int enteredAge = getEnteredAge();
+			validateAge(enteredAge);
+			System.out.println("Age is valid. You can proceed.");
+
+		} catch (InvalidAgeException e) {
+			System.err.println("Error: " + e.getMessage());
+		}
+	}
+	public static int getEnteredAge() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the Age");
+		int age = scan.nextInt();
+		return age;
+	}
+
+	public static void validateAge(int age) throws InvalidAgeException {
+		if (age < 18) {
+			throw new InvalidAgeException("Age must be 18 or older.");
+		}
+	}
+}
+
+Concolse ouput:
+Enter the Age
+17
+Error: Age must be 18 or older.
+
