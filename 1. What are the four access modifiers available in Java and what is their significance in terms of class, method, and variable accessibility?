@@ -2,30 +2,34 @@
 
 Public:
 
-Class: If a class is declared as public, it can be accessed from any other class.
-Method: A public method can be called from any other class.
-Variable: A public variable can be accessed from any other class.
+Class: It can be accessed from any other class.
+Method: Method can be called from any other class.
+Variable: Variable can be accessed from any other class.
+
+
 Protected:
 
-Class: A protected class is accessible within its package and by subclasses (even if they are in different packages).
-Method: A protected method is accessible within its package and by subclasses (even if they are in different packages).
-Variable: A protected variable is accessible within its package and by subclasses (even if they are in different packages).
+Class: Class is accessible within its package and by subclasses (even if they are in different packages).
+Method: Method is accessible within its package and by subclasses (even if they are in different packages).
+Variable: Variable is accessible within its package and by subclasses (even if they are in different packages).
+
+
 Default (Package-Private):
 
-Class: If no access modifier is specified (default), it is visible only within its package.
-Method: A method with default access is visible only within its package.
-Variable: A variable with default access is visible only within its package.
+Class: It is visible only within its package.
+Method: It is visible only within its package.
+Variable: It is visible only within its package.
+
+
 Private:
 
-Class: A private class is only accessible within the same class.
-Method: A private method is only accessible within the same class.
-Variable: A private variable is only accessible within the same class.
+Class: Class is only accessible within the same class.
+Method: Method is only accessible within the same class.
+Variable: Variable is only accessible within the same class.
+
+
 Significance:
-
-Public: Use when you want the widest possible access. It is commonly used for classes and methods that are part of a library or API.
-
-Protected: Useful when you want to allow subclasses to access certain members while keeping them hidden from the rest of the application.
-
-Default (Package-Private): This is a good choice when you want to hide the class or method from classes outside of the package. It restricts access to the package.
-
-Private: Use for members that should only be accessed within the defining class. This provides the highest level of encapsulation.
+Public: It is commonly used for classes and methods that are part of a library or API.
+Protected: When you want to allow subclasses to access while keeping hidden from the rest of the application.
+Default: When you want to hide the class or method from classes outside of the package.
+Private: Only be accessed within the defining class. This provides the highest level of encapsulation.
