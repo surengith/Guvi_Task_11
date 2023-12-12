@@ -1,4 +1,4 @@
-What is the difference between Exception and error?
+2. What is the difference between Exception and error?
 
 The difference between Exception and error is that:
 An Exception is an event that occurs during the program execution and disrupts the normal flow of the program’s execution. 
